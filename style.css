@@ -502,9 +502,13 @@ small {
     #btn {
         padding: 8px 14px;
         font-size: 1em;
+        transform: translateY(42px);
     }
     .content {
         display: block;
+    }
+    .formBx {
+        margin-top: 60px;
     }
     .footer {
         padding: 40px 140px 0px;
