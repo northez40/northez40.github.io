@@ -266,7 +266,7 @@ small {
 }
 
 .footer-col-2 h1 {
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 700;
 }
 
@@ -454,8 +454,25 @@ small {
         background-size: 30px;
         cursor: pointer;
     }
-    header.sticky .toggle {
+    header .toggle {
         filter: invert(1);
+    }
+    header {
+        background: #fff;
+        padding: 14px 100px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    header .logo {
+        color: #222;
+    }
+    header ul li a {
+        color: #333;
+        text-shadow: 0 0 0 #000;
+    }
+    header ul li a:hover,
+    header ul li a.active {
+        background: #333;
+        color: #fff;
     }
     section {
         padding: 100px 50px;
@@ -481,5 +498,25 @@ small {
     }
     section {
         padding: 100px 20px;
+    }
+    #btn {
+        padding: 8px 14px;
+        font-size: 1em;
+    }
+    .content {
+        display: block;
+    }
+    .footer {
+        padding: 40px 140px 0px;
+    }
+    .footer-col-2 h1 {
+        font-size: 1.6em;
+        font-weight: 700;
+    }
+    .footer-col-1,
+    .footer-col-2,
+    .footer-col-3 {
+        min-width: 250px;
+        margin-bottom: 80px;
     }
 }
