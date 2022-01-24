@@ -423,11 +423,12 @@ small {
         z-index: 1000;
     }
     .menu {
+        overflow: hidden;
         position: fixed;
-        top: 60px;
+        top: 68px;
         left: -100%;
         display: block;
-        padding: 100px 50px;
+        padding: 50px 50px;
         text-align: center;
         width: 100%;
         height: 100vh;
@@ -438,6 +439,9 @@ small {
     }
     .menu.active {
         left: 0;
+    }
+    header ul li {
+        margin-left: 0px;
     }
     header ul li a {
         color: #333;
@@ -459,15 +463,10 @@ small {
     }
     header {
         background: #fff;
-        padding: 14px 100px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     }
     header .logo {
         color: #222;
-    }
-    header ul li a {
-        color: #333;
-        text-shadow: 0 0 0 #000;
     }
     header ul li a:hover,
     header ul li a.active {
@@ -481,7 +480,7 @@ small {
         padding: 150px 50px 100px;
     }
     #text {
-        font-size: 6vw;
+        font-size: 5.2vw;
     }
 }
 
