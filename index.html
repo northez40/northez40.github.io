@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Strona testowa</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <section class="main">
+        <img src="images/background.jpg" id="background">
+        <h2 id="main-text">Cześć!<br>Jestem <span>northez</span>.</h2>
+        <h3 id="description-text">Informatyk, programista, UI designer oraz junior front-end developer</h3>
+        <a href="#featured" id="btn">Zobacz więcej</a>
+    </section>
+
+    <header>
+        <a href="#" class="logo">northez</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#featured" onclick="toggleMenu();" class="active">Strona główna</a></li>
+            <li><a href="#" onclick="toggleMenu();">Portfolio</a></li>
+            <li><a href="#" onclick="toggleMenu();">O mnie</a></li>
+            <li><a href="#" onclick="toggleMenu();">Kontakt</a></li>
+        </ul>
+    </header>
+
+    <section class="featured" id="featured">
+        <div class="small-container">
+            <div class="row">
+                <div class="featured-item">
+                    <img src="images/a1.png">
+                    <h4>Programowanie Lua</h4>
+                    <p>Programuję na platformie MTA już od 5 lat. Posiadam spore doświadczenie i jestem w stanie tworzyć zaawansowane i zoptymalizowane zasoby.</p>
+                </div>
+                <div class="featured-item">
+                    <img src="images/a2.png">
+                    <h4>Grafika komputerowa</h4>
+                    <p>Głównie zajmuję się UI designem. Potrafię posługiwać się Photoshopem oraz Illustratorem w stopniu zaawansowanym.</p>
+                </div>
+                <div class="featured-item">
+                    <img src="images/a3.png">
+                    <h4>Front-end Developer</h4>
+                    <p>Tworzę strony internetowe na poziomie juniora. Płynnie poruszam się w językach HTML, CSS i JavaScript.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h1>Moje większe <span>projekty</span></h1>
+        <div class="small-container">
+            <div class="row">
+                <div class="card" id="card-mtadream">
+                    <a href="#"><img src="images/projects/logo-mtadream.png"></a>
+                    <div class="card-content">
+                        <h2 class="card-title">MTA DREAM</h2>
+                        <p class="card-text">Klasyczny serwer RPG z odgrywaniem RP i rozwiniętymi frakcjami.</p>
+                        <a href="#" class="card-button">Zobacz więcej</a>
+                    </div>
+                </div>
+                <div class="card" id="card-homemta">
+                    <a href="#"><img src="images/projects/logo-homemta.png"></a>
+                    <div class="card-content">
+                        <h2 class="card-title">HomeMTA</h2>
+                        <p class="card-text">Nowoczesny serwer RPG oparty na karierze przestępczej.</p>
+                        <a href="#" class="card-button">Zobacz więcej</a>
+                    </div>
+                </div>
+                <div class="card" id="card-spacemta">
+                    <a href="#"><img src="images/projects/logo-spacemta.png"></a>
+                    <div class="card-content">
+                        <h2 class="card-title">spaceMTA</h2>
+                        <p class="card-text">Kosmiczny serwer RPG w bardzo jasnym motywie.</p>
+                        <a href="#" class="card-button">Zobacz więcej</a>
+                    </div>
+                </div>
+                <div class="card" id="card-coralrpg">
+                    <a href="#"><img src="images/projects/logo-coralrpg.png"></a>
+                    <div class="card-content">
+                        <h2 class="card-title">Coral RPG</h2>
+                        <p class="card-text">Najnowszy projekt RPG + RP.</p>
+                        <a href="#" class="card-button">Zobacz więcej</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let background = document.getElementById('background');
+        let text = document.getElementById('main-text');
+        let desctext = document.getElementById('description-text');
+        let btn = document.getElementById('btn');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+
+            background.style.top = value * 0.4 + 'px';
+            text.style.opacity = 1 - value * 0.002;
+            desctext.style.opacity = 1 - value * 0.002;
+            btn.style.opacity = 1 - value * 0.002;
+
+            header.classList.toggle('sticky', value > 0);
+        });
+
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
