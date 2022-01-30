@@ -169,7 +169,7 @@ section.main img {
     text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.3);
     opacity: 0;
     animation: 2500ms ease 0s 1 opacityAnimation forwards;
-    animation-delay: 800ms;
+    animation-delay: 1200ms;
 }
 
 #btn {
@@ -186,7 +186,7 @@ section.main img {
     transition: padding 500ms ease;
     opacity: 0;
     animation: 2500ms ease 0s 1 opacityAnimation forwards;
-    animation-delay: 1400ms;
+    animation-delay: 2000ms;
 }
 
 #btn:hover {
@@ -325,7 +325,7 @@ section.main img {
 
 .card:hover img,
 .card:focus-within img {
-    transform: scale(1.2);
+    transform: scale(1.14);
 }
 
 .card-content {
