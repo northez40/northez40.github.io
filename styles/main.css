@@ -100,7 +100,8 @@ header ul li a {
     padding: 6px 15px;
     color: #fff;
     border-radius: 3px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
+    transition: 0.5s ease;
 }
 
 header ul li a:hover,
@@ -132,7 +133,7 @@ section.main img {
     height: 100%;
     object-fit: cover;
     pointer-events: none;
-    animation: 1500ms ease-out 0s 1 slideFromRight forwards;
+    animation: 2500ms ease-out 0s 1 slideFromRight forwards;
 }
 
 #main-text {
@@ -169,7 +170,7 @@ section.main img {
     text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.3);
     opacity: 0;
     animation: 2500ms ease 0s 1 opacityAnimation forwards;
-    animation-delay: 1200ms;
+    animation-delay: 1800ms;
 }
 
 #btn {
@@ -186,7 +187,7 @@ section.main img {
     transition: padding 500ms ease;
     opacity: 0;
     animation: 2500ms ease 0s 1 opacityAnimation forwards;
-    animation-delay: 2000ms;
+    animation-delay: 3000ms;
 }
 
 #btn:hover {
@@ -262,7 +263,7 @@ section.main img {
 }
 
 .projects h1 {
-    padding-top: 30px;
+    padding-top: 42px;
     text-align: center;
     color: #fff;
     font-size: 2em;
@@ -392,6 +393,59 @@ section.main img {
 }
 
 
+/* copyright bottom */
+
+.copyright {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 8px;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: var(--theme);
+}
+
+
+/* contact */
+
+.contact {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 0px;
+    color: #fff;
+    background: var(--background-primary);
+    margin: auto;
+}
+
+.contact h1 {
+    padding-top: 42px;
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.contact h1 span {
+    color: var(--theme);
+    font-weight: 800;
+}
+
+.contact-options {
+    padding-top: 42px;
+    color: #fff;
+    font-size: 3em;
+    font-weight: 400;
+    list-style: none;
+}
+
+.contact-options span {
+    color: var(--theme);
+    font-weight: 800;
+}
+
+
 /* smaller devices */
 
 @media (max-width: 991px) {
@@ -513,5 +567,15 @@ section.main img {
     }
     .card img {
         margin-top: -65%;
+    }
+    .copyright {
+        font-size: 0.7rem;
+    }
+    .contact h1 {
+        font-size: 1.5rem;
+    }
+    .contact-options {
+        font-size: 1rem;
+        list-style: none;
     }
 }

@@ -4,28 +4,30 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>northez - Strona główna</title>
+    <title>Igor Piotrowicz - Strona główna</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
 
 <body>
     <section class="main">
         <img src="images/background.jpg" id="background">
-        <h2 id="main-text">Cześć!<br>Jestem <span>northez</span>.</h2>
+        <h2 id="main-text">Cześć!<br>Jestem <span class="ml3">Igor</span>.</h2>
         <h3 id="description-text">Informatyk, programista, UI designer oraz junior front-end developer</h3>
         <a href="#featured" id="btn">Zobacz więcej</a>
     </section>
 
     <header>
-        <a href="#" class="logo">northez</a>
+        <a href="#" class="logo">Igor Piotrowicz</a>
         <div class="toggle" onclick="toggleMenu();"></div>
         <ul class="menu">
             <li><a href="#featured" onclick="toggleMenu();" class="active">Strona główna</a></li>
             <li><a href="#" onclick="toggleMenu();">Portfolio</a></li>
             <li><a href="#" onclick="toggleMenu();">O mnie</a></li>
-            <li><a href="#" onclick="toggleMenu();">Kontakt</a></li>
+            <li><a href="contact.html" onclick="toggleMenu();">Kontakt</a></li>
         </ul>
     </header>
 
@@ -91,6 +93,10 @@
         </div>
     </section>
 
+    <div class="copyright">
+        <p>Odwiedź zakładkę <a href="contact.html">Kontakt</a> po współpracę.</p>
+    </div>
+
     <script>
         let background = document.getElementById('background');
         let text = document.getElementById('main-text');
@@ -116,6 +122,20 @@
             menuToggle.classList.toggle('active');
             menu.classList.toggle('active');
         }
+
+        var textWrapper = document.querySelector('.ml3');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({
+                loop: false
+            })
+            .add({
+                targets: '.ml3 .letter',
+                opacity: [0, 1],
+                easing: "easeInOutQuad",
+                duration: 1250,
+                delay: (el, i) => 350 * (i + 1)
+            });
     </script>
 </body>
 
