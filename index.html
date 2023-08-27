@@ -2,141 +2,200 @@
 <html lang="pl">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Igor Piotrowicz - Strona główna</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARTYBUS</title>
+
+    <link rel="stylesheet" href="css/start.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <section class="main">
-        <img src="images/background.jpg" id="background">
-        <h2 id="main-text">Cześć!<br>Jestem <span class="ml3">Igor</span>.</h2>
-        <h3 id="description-text">Informatyk, programista, UI designer oraz junior front-end developer</h3>
-        <a href="#featured" id="btn">Zobacz więcej</a>
-    </section>
+    <div class="hero">
+        <div class="hero-wave"></div>
+
+        <div class="hero-content">
+            <div class="right-side">
+                <img src="images/hero-image.svg" alt="hero-image">
+            </div>
+
+            <div class="left-side">
+                <h1>Wejdź na pokład <span>PARTYBUS</span>a</h1>
+
+                <p>Niech Twój wieczór nabierze tempa! To mobilna strefa tańca, która zapewni Ci mnóstwo radości i świetnych wspomnień.</p>
+
+                <a href="#description" class="btn">Zobacz więcej</a>
+            </div>
+        </div>
+    </div>
 
     <header>
-        <a href="#" class="logo">Igor Piotrowicz</a>
+        <a href="#">PARTYBUSPL</a>
+
         <div class="toggle" onclick="toggleMenu();"></div>
+
         <ul class="menu">
-            <li><a href="#featured" onclick="toggleMenu();" class="active">Strona główna</a></li>
-            <li><a href="#" onclick="toggleMenu();">Portfolio</a></li>
-            <li><a href="#" onclick="toggleMenu();">O mnie</a></li>
-            <li><a href="contact.html" onclick="toggleMenu();">Kontakt</a></li>
+            <li><a href="#" onclick="toggleMenu();">Start</a></li>
+            <li><a href="#" onclick="toggleMenu();" class="active" target="_blank">Kup bilet</a></li>
+            <li><a href="#gallery" onclick="toggleMenu();">Galeria</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Kontakt</a></li>
         </ul>
     </header>
 
-    <section class="featured" id="featured">
-        <div class="small-container">
-            <div class="row">
-                <div class="featured-item">
-                    <img src="images/a1.png">
-                    <h4>Programowanie Lua</h4>
-                    <p>Programuję na platformie MTA już od 5 lat. Posiadam spore doświadczenie i jestem w stanie tworzyć zaawansowane i zoptymalizowane zasoby.</p>
+    <section class="description" id="description">
+        <div class="container">
+            <div class="title">
+                <h2>Niezapomniana przygoda</h2>
+                <h5>Niech impreza trwa całą noc - na kółkach!</h5>
+            </div>
+
+            <div class="art-container" style="padding-bottom: 40px;">
+                <div class="art-text t-left">
+                    <div class="f-title">
+                        <h3>Asperiores vero quam excepturi</h3>
+                    </div>
+
+                    <div class="f-item">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Corporis voluptatem rerum soluta tempore eligendi sequi.</p>
+
+                        <p>Lorem ipsum elit. Dolorem expedita repellendus dolor sit amet consectetur adipisicing incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto porro numquam quos in ipsum sequi suscipit! Odit ea quo molestiae. Placeat,
+                            iste? Iste molestias ad. Corporis voluptatem rerum soluta tempore eligendi sequi.</p>
+
+                        <p>Dolorem expedita repellendus incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptatem rerum soluta tempore eligendi sequi.</p>
+                    </div>
+
+                    <a href="#gallery" class="btn">Zobacz galerię</a>
                 </div>
-                <div class="featured-item">
-                    <img src="images/a2.png">
-                    <h4>Grafika komputerowa</h4>
-                    <p>Głównie zajmuję się UI designem. Potrafię posługiwać się Photoshopem oraz Illustratorem w stopniu zaawansowanym.</p>
-                </div>
-                <div class="featured-item">
-                    <img src="images/a3.png">
-                    <h4>Front-end Developer</h4>
-                    <p>Tworzę strony internetowe na poziomie juniora. Płynnie poruszam się w językach HTML, CSS i JavaScript.</p>
+
+                <div class="art-image i-right">
+                    <img src="images/art2001.jpg" alt="obrazek1">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="projects" id="projects">
-        <h1>Moje większe <span>projekty</span></h1>
-        <div class="small-container">
-            <div class="row">
-                <div class="card" id="card-mtadream">
-                    <a href="#"><img src="images/projects/logo-mtadream.png"></a>
-                    <div class="card-content">
-                        <h2 class="card-title">MTA DREAM</h2>
-                        <p class="card-text">Klasyczny serwer RPG z odgrywaniem RP i rozwiniętymi frakcjami.</p>
-                        <a href="#" class="card-button">Zobacz więcej</a>
+    <section class="quote-divider">
+        <div class="container">
+            <h5>PARTYBUS to więcej niż autobus - to przemieszczająca się uczta, w której głównym daniem jest zabawa!</h5>
+            <p>Czekamy na Ciebie i Twoich znajomych</p>
+        </div>
+    </section>
+
+    <section class="smalldesc">
+        <div class="container">
+            <div class="smalldesc-all">
+                <div class="smalldesc-box">
+                    <div class="smalldesc-content">
+                        <p>Czas na odrobinę szaleństwa! PARTYBUS to idealny sposób na spędzenie czasu z przyjaciółmi - hop on the bus and let's party!<br><br>Już teraz - kup swój bilet do świata nieskończonej zabawy i muzyki</p>
+                        <br>
+                        <a href="#" target="_blank" class="btn">Kup bilet</a>
                     </div>
                 </div>
-                <div class="card" id="card-homemta">
-                    <a href="#"><img src="images/projects/logo-homemta.png"></a>
-                    <div class="card-content">
-                        <h2 class="card-title">HomeMTA</h2>
-                        <p class="card-text">Nowoczesny serwer RPG oparty na karierze przestępczej.</p>
-                        <a href="#" class="card-button">Zobacz więcej</a>
-                    </div>
-                </div>
-                <div class="card" id="card-spacemta">
-                    <a href="#"><img src="images/projects/logo-spacemta.png"></a>
-                    <div class="card-content">
-                        <h2 class="card-title">spaceMTA</h2>
-                        <p class="card-text">Kosmiczny serwer RPG w bardzo jasnym motywie.</p>
-                        <a href="#" class="card-button">Zobacz więcej</a>
-                    </div>
-                </div>
-                <div class="card" id="card-coralrpg">
-                    <a href="#"><img src="images/projects/logo-coralrpg.png"></a>
-                    <div class="card-content">
-                        <h2 class="card-title">Coral RPG</h2>
-                        <p class="card-text">Najnowszy projekt RPG + RP. Prosty i minimalistyczny.</p>
-                        <a href="#" class="card-button">Zobacz więcej</a>
-                    </div>
+
+                <div class="smalldesc-image">
+                    <img src="images/art3001.jpg" alt="obrazek1">
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="copyright">
-        <p>Odwiedź zakładkę <a href="contact.html">Kontakt</a> po współpracę.</p>
-    </div>
+    <section class="slider" id="gallery">
+        <div class="container">
+            <div class="slideshow">
+                <div class="slide">
+                    <img src="images/gallery/1.jpg" alt="zdjecie_1" draggable="false" />
+                </div>
 
-    <script>
-        let background = document.getElementById('background');
-        let text = document.getElementById('main-text');
-        let desctext = document.getElementById('description-text');
-        let btn = document.getElementById('btn');
-        let header = document.querySelector('header');
+                <div class="slide">
+                    <img src="images/gallery/2.jpg" alt="zdjecie_2" draggable="false" />
+                </div>
 
-        window.addEventListener('scroll', function() {
-            let value = window.scrollY;
+                <div class="slide">
+                    <img src="images/gallery/3.jpg" alt="zdjecie_3" draggable="false" />
+                </div>
 
-            background.style.top = value * 0.4 + 'px';
-            text.style.opacity = 1 - value * 0.002;
-            desctext.style.opacity = 1 - value * 0.002;
-            btn.style.opacity = 1 - value * 0.002;
+                <div class="slide">
+                    <img src="images/gallery/4.jpg" alt="zdjecie_4" draggable="false" />
+                </div>
 
-            header.classList.toggle('sticky', value > 0);
-        });
+                <a class="prev bx bx-chevron-left" onclick="plusSlides(-1)"></a>
+                <a class="next bx bx-chevron-right" onclick="plusSlides(1)"></a>
 
-        function toggleMenu() {
-            var menuToggle = document.querySelector('.toggle');
-            var menu = document.querySelector('.menu');
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            menuToggle.classList.toggle('active');
-            menu.classList.toggle('active');
-        }
+    <section class="description" id="contact">
+        <div class="container">
+            <div class="title">
+                <h2>Skontakuj się z nami</h2>
+                <h5>Masz okazję, więc świętuj w wielkim stylu!</h5>
+            </div>
 
-        var textWrapper = document.querySelector('.ml3');
-        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+            <div class="art-container">
+                <div class="art-text t-left">
+                    <div class="f-title">
+                        <h3>Masz jakieś pytania?</h3>
+                    </div>
 
-        anime.timeline({
-                loop: false
-            })
-            .add({
-                targets: '.ml3 .letter',
-                opacity: [0, 1],
-                easing: "easeInOutQuad",
-                duration: 1250,
-                delay: (el, i) => 350 * (i + 1)
-            });
-    </script>
+                    <div class="f-item">
+                        <p>Telefon: <a href="tel:111222333" style="color: var(--theme-main);">111 222 333</a></p>
+
+                        <p>E-mail: <a href="mailto:kontakt@partybuspl.pl" style="color: var(--theme-main);">kontakt@partybuspl.pl</a></p>
+
+                        <p>Dolorem expedita repellendus incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptatem rerum soluta tempore eligendi sequi.</p>
+                    </div>
+
+                    <a href="#" class="btn">Wróć do góry</a>
+                </div>
+
+                <div class="art-image i-right">
+                    <img src="images/art1001.jpg" alt="obrazek1">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="#" class="footer-logo-link">PARTYBUSPL</a>
+
+        <ul>
+            <li>
+                <a href="#">Start</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">Kup bilet</a>
+            </li>
+            <li>
+                <a href="#gallery">Galeria</a>
+            </li>
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">Polityka prywatności</a>
+            </li>
+            <li>
+                <a href="#contact">Kontakt</a>
+            </li>
+        </ul>
+
+        <div class="footer-socials">
+            <a href="#" target="_blank" class="bx bxl-facebook-circle"></a>
+            <a href="#" target="_blank" class="bx bxl-instagram-alt"></a>
+            <a href="#" target="_blank" class="bx bxl-tiktok"></a>
+        </div>
+    </footer>
+
+    <script src="js/gallery.js"></script>
+    <script src="js/header.js"></script>
 </body>
 
 </html>

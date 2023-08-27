@@ -1,0 +1,373 @@
+@import url("main.css");
+@keyframes slideFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    margin: 0 auto;
+    margin-top: 26px;
+}
+
+.hero-content {
+    position: relative;
+    width: 91rem;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.hero-content .left-side {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 50%;
+}
+
+.hero-content .left-side h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: var(--text-main);
+}
+
+.hero-content .left-side h1 span {
+    color: var(--theme-main);
+    font-family: 'NasalizationRg-Regular';
+}
+
+.hero-content .left-side p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: var(--text-main);
+}
+
+.hero-content .right-side {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    /* left: 50%; */
+    right: 0;
+}
+
+.hero-content .right-side img {
+    user-select: none;
+}
+
+.hero-wave {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 1440/320;
+    display: block;
+    bottom: 0;
+    background-image: url(../images/hero-waves.svg);
+}
+
+#description,
+#contact {
+    scroll-margin-top: 80px;
+}
+
+.description {
+    background-color: var(--background-light);
+    padding-top: 40px;
+    box-shadow: inset 0px 0px 4px 4px rgba(10, 10, 10, .1);
+}
+
+.quote-divider {
+    padding: 60px 0 60px 0;
+    text-align: center;
+    margin: 0 16px;
+    color: var(--text-main);
+}
+
+.quote-divider h5 {
+    font-size: 1.05rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 18px;
+}
+
+.quote-divider p {
+    font-size: 0.975rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.reviews .title {
+    margin-top: 40px;
+}
+
+.r-slider {
+    width: 100%;
+    margin: 40px 0 60px;
+    position: relative;
+}
+
+.slider-box {
+    width: 70%;
+    background-color: var(--theme-main);
+    color: var(--text-light);
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    border-radius: 4px;
+}
+
+.slider-box:not(.sb-active) {
+    position: absolute;
+    background-color: var(--theme-lighter);
+    opacity: .25;
+    left: 95%;
+    top: 0px;
+}
+
+.sb-active {
+    position: relative;
+    display: block;
+    box-shadow: 0px 4px 8px 0px rgba(66, 68, 90, 0.25);
+}
+
+.slider-box h4 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+}
+
+.slider-box p {
+    margin-top: 20px;
+    font-size: .95rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.r-dots {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.dot {
+    height: 14px;
+    width: 14px;
+    background-color: #ddd;
+    border-radius: 40%;
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.smalldesc {
+    background-color: var(--background-light);
+    padding: 40px 0 14px;
+    box-shadow: inset 0px 0px 4px 4px rgba(10, 10, 10, .1);
+}
+
+.smalldesc-all {
+    position: relative;
+}
+
+.smalldesc-box {
+    /* background-color: var(--theme-main); */
+    border: 2px solid var(--theme-main);
+    position: absolute;
+    padding: 30px;
+    height: 70%;
+    border-radius: 20px;
+    width: 70%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0px 8px 14px 0px rgba(66, 68, 90, 0.2);
+}
+
+.smalldesc-content {
+    color: var(--text-main);
+    position: absolute;
+    width: 76%;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.smalldesc-content p {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.smalldesc-image {
+    width: 40%;
+    aspect-ratio: 4/3;
+    display: block;
+    position: relative;
+    margin: 30px;
+    margin-top: 0px;
+}
+
+.smalldesc-image img {
+    width: 100%;
+    aspect-ratio: 5/3;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 6px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0px 8px 14px 0px rgba(66, 68, 90, 0.2);
+}
+
+.smalldesc .btn {
+    padding: 14px 50px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+#gallery {
+    scroll-margin-top: 200px;
+    margin: 40px auto;
+}
+
+.slideshow {
+    position: relative;
+    margin: 0 auto;
+}
+
+.slideshow .slide {
+    display: none;
+}
+
+.slideshow .slide img {
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+    /* max-height: 600px; */
+    aspect-ratio: 21/9;
+    user-select: none;
+    animation: slideFade .4s ease 0s forwards;
+}
+
+.slideshow .prev,
+.slideshow .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -2.11rem;
+    padding: 16px;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 2rem;
+    transition: 0.2s ease;
+    user-select: none;
+}
+
+.slideshow .next {
+    right: 0;
+}
+
+.slideshow .prev:hover,
+.slideshow .next:hover {
+    background-color: rgba(0, 0, 0, .125);
+}
+
+.dot {
+    cursor: pointer;
+    height: 3px;
+    width: 40px;
+    margin: 0 4px;
+    background-color: var(--text-main);
+    display: inline-block;
+    transition: background-color 0.2s ease;
+    border-radius: 2px;
+}
+
+.slideshow-active,
+.dot:hover {
+    background-color: var(--theme-main);
+}
+
+@media only screen and (max-width: 81rem) {
+    .hero-content {
+        width: 100%;
+    }
+    .hero-content .left-side {
+        width: 60%;
+        padding: 16px;
+        top: 40%;
+    }
+    .hero-content .right-side {
+        padding: 16px;
+        top: 60%;
+    }
+    .smalldesc-content p {
+        font-size: 1rem;
+    }
+    .smalldesc-content .btn {
+        font-size: 1rem;
+        padding: 10px 40px;
+    }
+    .smalldesc-box {
+        position: relative;
+        border-radius: 6px;
+        width: 90%;
+        margin: 0 auto;
+        transform: none;
+        padding: 10px;
+    }
+    .smalldesc-content {
+        width: 100%;
+        position: relative;
+        transform: none;
+        padding: 30px;
+        right: 0px;
+    }
+    .smalldesc-content p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+    .smalldesc-image {
+        width: 90%;
+        margin: 30px auto;
+    }
+    .smalldesc .btn {
+        display: block;
+        padding: 14px;
+        width: 100%;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {}
+
+@media only screen and (max-width: 600px) {
+    .hero-content .left-side {
+        width: 100%;
+        left: 0;
+        padding: 28px;
+        top: 31%;
+    }
+    .hero-content .left-side h1 {
+        font-size: 2.4rem;
+    }
+    .hero-content .left-side p {
+        font-size: 1.1rem;
+    }
+    .hero-content .right-side {
+        width: 100%;
+        left: 0;
+        padding: 28px;
+        top: 72%;
+    }
+    .quote-divider {
+        padding: 40px 0 40px 0;
+    }
+}
